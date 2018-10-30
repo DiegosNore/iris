@@ -1,0 +1,11 @@
+apt install python3-pip
+pip3 install opencv-python
+pip3 install opencv-contrib-python
+pip3 install boto3
+aws configure
+AKIAJBYBRTFBZH335CJQ
+
+us-east-2
+json
+
+npm install --save multer
