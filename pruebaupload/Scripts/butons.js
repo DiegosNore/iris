@@ -61,7 +61,7 @@ ir.addEventListener("click", function() {
 
 window.onload = function() {
   if (artag.legth == 0 && artime.length == 0) {
-    
+
   } else {
 
   }
@@ -70,3 +70,6 @@ window.onload = function() {
 bitacora.addEventListener("click", function() {
   window.location.reload();
 });
+// visualización de emociones
+var mydata = JSON.parse(porcentaje);
+window.print(mydata);

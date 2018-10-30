@@ -2,17 +2,23 @@ const express = require('express');
 const multer = require('multer');
 const ejs = require('ejs');
 const path = require('path');
+const fs = require('fs');
+var mongoose = require('mongoose');
+const commandLineArgs = require('command-line-args');
+
+var configDB = require('./database.js');
 
 var py = require('python-shell');
-
-//set storage engine
 const storage = multer.diskStorage({
   destination: './public/uploads/',
   filename: function(req, file, cb) {
     cb(null, file.fieldname + path.extname(file.originalname));
   }
 });
-
+var promise = mongoose.connect('mongodb://diegosnore:velajuel1103@ds145563.mlab.com:45563/iris', {
+  useMongoClient: true,
+  /* other options */
+}); // connect to our database
 //init upload
 const upload = multer({
   storage: storage,
@@ -109,7 +115,7 @@ app.post('/upload', (req, res) => {
           msg: 'File uploaded',
           file:`uploads/${req.file.filename}`
         });
-
+        app.get()
       }
     }
   });
