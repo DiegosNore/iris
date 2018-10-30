@@ -1,4 +1,0 @@
-Pasos a seguir para que funcione el upload image
-npm init y seguir los pasos
-npm install --save express ejs multer
-sudo npm install -g nodemon
